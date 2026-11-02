@@ -3,21 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Still · Everyday objects</title>
+    <title>Still · Objects for the everyday</title>
     <meta
       name="description"
-      content="A small collection of everyday objects. Demonstration store."
+      content="Furniture, workspace essentials, and everyday carry. A small demonstration store with a literary spirit."
+    />
+    <link
+      rel="preload"
+      href="/static/fonts/im-fell-english.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
     />
     <link rel="stylesheet" href="/static/base.css" />
     <link rel="stylesheet" href="/static/site.css" />
   </head>
   <body>
+    <a class="skip-link" href="#collection">Skip to collection</a>
     <div class="store-wrap">
+      <div class="store-kicker">HOME, WORK & THE MOMENTS IN BETWEEN</div>
       <header class="page-header">
-        <a class="brand" href="/">still.</a>
+        <a class="brand" href="/"
+          >still.<span>OBJECTS FOR THE EVERYDAY</span></a
+        >
         <nav aria-label="Store">
-          <a href="#collection">Shop</a
-          ><button class="text-button" id="orders-link">Orders</button
+          <a href="#collection">The collection</a
+          ><button class="text-button" id="orders-link">Your orders</button
           ><button class="text-button" id="admin-link" hidden>Manage</button>
         </nav>
         <div class="row">
@@ -28,15 +39,36 @@
         </div>
       </header>
       <main>
-        <section class="store-intro">
-          <div>
-            <p class="collection-label">Home · Workspace · Carry</p>
-            <h1>The collection.</h1>
-            <p>Everyday pieces for home and work.</p>
+        <section class="store-intro" aria-labelledby="store-title">
+          <img
+            class="store-hero-photo"
+            src="/static/images/typewriter.jpg"
+            alt="A vintage typewriter and papers on a warmly lit wooden desk"
+            fetchpriority="high"
+          />
+          <div class="store-hero-content">
+            <p class="collection-label">A COLLECTION FOR THE WAY YOU LIVE</p>
+            <h1 id="store-title">For home.<br />For the everyday.</h1>
+            <p>
+              Furniture, workspace essentials,<br />and the things you take
+              along.
+            </p>
+            <a class="collection-link" href="#collection"
+              >Discover the collection <span aria-hidden="true">→</span></a
+            >
           </div>
-          <span class="edition">01 — 04</span>
+          <div class="hero-caption">
+            <span>THE EVERYDAY EDIT</span><span>HOME / WORKSPACE / CARRY</span>
+          </div>
         </section>
         <section id="collection">
+          <div class="collection-heading">
+            <div>
+              <span class="eyebrow">The everyday edit</span>
+              <h2>A few good things.</h2>
+            </div>
+            <p>Find a place for something new.</p>
+          </div>
           <div class="catalog-tools">
             <div
               id="categories"
@@ -49,7 +81,7 @@
                 ><input
                   id="search"
                   type="search"
-                  placeholder="Search collection" /></label
+                  placeholder="Find something…" /></label
               ><label
                 ><span class="sr">Sort products</span
                 ><select id="sort">
@@ -61,34 +93,38 @@
             </div>
           </div>
           <div id="products" class="products" aria-live="polite">
-            <p class="loading">Loading collection…</p>
+            <p class="loading">Opening the collection…</p>
           </div>
           <div class="collection-footer">
             <span id="product-count"></span
-            ><span>Photography shown for illustration.</span>
+            ><span>Sample collection · Prices in USD</span>
           </div>
         </section>
         <section class="store-note">
           <div>
-            <h2>About the collection</h2>
-            <p>
-              A selection of furniture, workspace accessories, and everyday
-              carry.
-            </p>
+            <span class="eyebrow">A place for the everyday</span>
+            <h2>Make yourself <br />at home.</h2>
           </div>
           <div>
-            <span class="label">About this store</span>
             <p>
-              This is a working demonstration. You can browse, create an
-              account, and place a sample order. No payment is collected.
+              A reading corner. A familiar desk. Your favourite route through
+              the city. Explore a small collection of objects for the places and
+              routines that make a day your own.
             </p>
+            <p class="store-disclaimer">
+              This is a demonstration store. You can browse, create an account,
+              and place a sample order. No payment is collected. Photography is
+              illustrative.
+            </p>
+            <a href="#collection" class="collection-link"
+              >Back to the collection <span aria-hidden="true">↑</span></a
+            >
           </div>
         </section>
       </main>
       <footer>
-        <a class="brand" href="/">still.</a
-        ><span>Sample collection · Prices in USD</span
-        ><a href="#collection">Back to collection ↑</a>
+        <a class="brand" href="/">still.</a><span>Home · Workspace · Carry</span
+        ><a href="#store-title">Back to top ↑</a>
       </footer>
     </div>
     <dialog id="shop-dialog">

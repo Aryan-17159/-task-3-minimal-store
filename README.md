@@ -1,12 +1,14 @@
-# Still — Minimal Store
+# Still — Literary Store
 
-A small photographic catalog with category filters, search, a shopping bag, account access, sample checkout, order history, and administrator controls.
+A sepia storefront inspired by the second supplied reference: a typewriter photograph, dark brown, cream, and old-style book typography. It includes categories, search, a shopping bag, checkout, order history, and administrator controls.
 
-Built from new source for task 3. The interface uses a restrained palette, fine dividers, system fonts, native dialogs, and responsive layouts. Each project is self-contained.
+[Reference interpretation, typography, and asset sources](docs/DESIGN.md). Fonts and photographs are bundled locally.
 
 ![Desktop screenshot](docs/desktop.png)
 
 [View mobile screenshot](docs/mobile.png)
+
+[Shopping bag](docs/bag.png) · [Checkout](docs/checkout.png) · [Mobile checkout](docs/checkout-mobile.png)
 
 ## Run locally
 
@@ -60,7 +62,7 @@ python -m pytest -q
 
 API coverage: Role protection, product CRUD, cart validation, server-calculated totals, stock updates, order privacy, and single-use cancellation/restocking.
 
-The browser flows were also exercised at 1440px and 390px, with no JavaScript errors or horizontal overflow. Screenshots are from those local checks. Automated database tests use SQLite; PostgreSQL concurrency has not been load-tested.
+The browser flows were also exercised at 1440px, 390px, and 320px, with no JavaScript errors or horizontal overflow. Screenshots are from those local checks. Automated database tests use SQLite; PostgreSQL concurrency has not been load-tested.
 
 ## Publish as a separate repository
 

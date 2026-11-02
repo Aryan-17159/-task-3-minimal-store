@@ -10,3 +10,5 @@ Sample photographs downloaded from Unsplash and bundled for reproducible preview
 | bag.jpg | https://images.unsplash.com/photo-1553062407-98eeb64c6a62 |
 
 Images were fetched with `auto=format&fit=crop&w=1000&q=85`. No generated product illustrations are used.
+
+The editorial hero uses [this Unsplash photograph](https://unsplash.com/photos/fGrb35rHPCQ), downloaded from `https://images.unsplash.com/photo-1652616555250-57d49a2034e2` at 1800px width and quality 85. It illustrates the visual theme and is not a product listing.

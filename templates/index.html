@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Still · Everyday objects</title>
+    <meta
+      name="description"
+      content="A small collection of everyday objects. Demonstration store."
+    />
+    <link rel="stylesheet" href="/static/base.css" />
+    <link rel="stylesheet" href="/static/site.css" />
+  </head>
+  <body>
+    <div class="store-wrap">
+      <header class="page-header">
+        <a class="brand" href="/">still.</a>
+        <nav aria-label="Store">
+          <a href="#collection">Shop</a
+          ><button class="text-button" id="orders-link">Orders</button
+          ><button class="text-button" id="admin-link" hidden>Manage</button>
+        </nav>
+        <div class="row">
+          <button class="text-button" id="account-link">Account</button
+          ><button class="bag-button" id="bag-link">
+            Bag <span id="bag-count">0</span>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="store-intro">
+          <div>
+            <p class="collection-label">Home · Workspace · Carry</p>
+            <h1>The collection.</h1>
+            <p>Everyday pieces for home and work.</p>
+          </div>
+          <span class="edition">01 — 04</span>
+        </section>
+        <section id="collection">
+          <div class="catalog-tools">
+            <div
+              id="categories"
+              class="category-tabs"
+              aria-label="Product categories"
+            ></div>
+            <div class="catalog-search">
+              <label
+                ><span class="sr">Search collection</span
+                ><input
+                  id="search"
+                  type="search"
+                  placeholder="Search collection" /></label
+              ><label
+                ><span class="sr">Sort products</span
+                ><select id="sort">
+                  <option value="default">Featured</option>
+                  <option value="price">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                </select></label
+              >
+            </div>
+          </div>
+          <div id="products" class="products" aria-live="polite">
+            <p class="loading">Loading collection…</p>
+          </div>
+          <div class="collection-footer">
+            <span id="product-count"></span
+            ><span>Photography shown for illustration.</span>
+          </div>
+        </section>
+        <section class="store-note">
+          <div>
+            <h2>About the collection</h2>
+            <p>
+              A selection of furniture, workspace accessories, and everyday
+              carry.
+            </p>
+          </div>
+          <div>
+            <span class="label">About this store</span>
+            <p>
+              This is a working demonstration. You can browse, create an
+              account, and place a sample order. No payment is collected.
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a class="brand" href="/">still.</a
+        ><span>Sample collection · Prices in USD</span
+        ><a href="#collection">Back to collection ↑</a>
+      </footer>
+    </div>
+    <dialog id="shop-dialog">
+      <div class="dialog-head">
+        <h2 id="dialog-title"></h2>
+        <button class="icon-button" id="close-dialog" aria-label="Close">
+          ×
+        </button>
+      </div>
+      <div id="dialog-body"></div>
+    </dialog>
+    <script src="/static/common.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
